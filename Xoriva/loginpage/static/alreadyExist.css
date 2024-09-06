@@ -1,0 +1,69 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #3425af, #6441a5); /* Purple gradient background */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    background-color: #ffffff;
+    color: #6a0dad;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #8a2be2;
+    color: #ffffff;
+}
+
+.support-link p a {
+    color: #ffccff;
+    text-decoration: none;
+}
+
+.support-link p a:hover {
+    text-decoration: underline;
+}

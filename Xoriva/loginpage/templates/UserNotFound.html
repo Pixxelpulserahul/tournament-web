@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Error</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper animated_shake">
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+            <h1>Login Error</h1>
+            <p class="error-message">Incorrect username or password. Please try again!</p>
+            <div class="input-box">
+                {{form.username}}
+                <i class='bx bxs-user-circle bx-tada'></i>
+            </div>
+            <div class="input-box">
+                {{form.password}}
+                <i class='bx bxs-lock-alt bx-tada'></i>
+            </div>
+            <button type="submit" class="btn">Try Again</button>
+            <div class="register-link">
+                <p>Don’t have an account? <a href="{% url 'signup_Home' %}">Register</a></p>
+                <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

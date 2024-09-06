@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Exists</title>
+    <link rel="stylesheet" href="{% static 'alreadyExist.css' %}">
+</head>
+<body>
+    <div class="wrapper animated fadeIn">
+        <h1>Account Already Exists</h1>
+        <p>An account with this username already exists. Please try a different username or log in to your existing account.</p>
+        <div class="action-buttons">
+            <a href="{% url 'signup_Home' %}" class="btn">Try Again</a>
+            <a href="{% url 'login' %}" class="btn">Login</a>
+        </div>
+        <div class="support-link">
+            <p>Need help? <a href="https://www.instagram.com/pixelpulserahul/">Contact Support</a></p>
+        </div>
+    </div>
+</body>
+</html>
